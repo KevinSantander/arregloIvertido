@@ -4,16 +4,13 @@ let arregloInvertido: number = Number(
 let arreglo: number[] = new Array(arregloInvertido);
 let indice: number;
 let resultado: number = 0;
-for (indice = 0; indice < arregloInvertido; indice++) {
+for (indice = arreglo.length - 1; indice >= 0; indice--) {
   arreglo[indice] = Number(
     prompt(`Indique el nro que va en la posición ${indice}: `)
   );
   resultado = arreglo[indice];
-  console.log(`Numero ingresados son ${resultado}`);
+  console.log(`EL numero ingresado: ${resultado}`);
 }
-console.log("De dimension:", arregloInvertido);
-
-//for (indice = 0; indice < dimensionArreglo; indice++) {
-//console.log(`El número en la posición ${indice} es: ${arreglo[indice]}`);
-//}
-//console.log(`La suma del arreglo es: ${resultado}`);
+console.log(
+  `De dimension: ${arregloInvertido} y su resultado invertido es:[${arreglo}]`
+);
